@@ -102,7 +102,7 @@ def img_to_bytes(img_path):
 
 def main():
     
-    st.sidebar.markdown('''[<img src='data:image/png;base64,{}' class='img-fluid' width=256 height=86>](https://www.uninorte.edu.co)'''.format(img_to_bytes("/Users/dsgiraldo/Desktop/UNINORTE.png")), unsafe_allow_html=True)
+    st.sidebar.markdown('''[<img src='data:image/png;base64,{}' class='img-fluid' width=256 height=86>](https://www.uninorte.edu.co)'''.format(img_to_bytes("UNINORTE.png")), unsafe_allow_html=True)
     
     P1=0
     P2=0
