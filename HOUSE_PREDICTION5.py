@@ -468,7 +468,7 @@ def main():
 	       st.title("Subir Archivo De Arriendos")
 	       uploaded_file = st.file_uploader("Upload Files",type=["xlsx"])
 	       if uploaded_file is not None:
-		NEWPREDS2 = pd.read_excel()
+	        NEWPREDS2 = pd.read_excel()
 		NEWPREDS2["Precio"] = NEWPREDS2["Precio"]+NEWPREDS2["Valor_administracion"]
 		NEWPREDS2["Precio"]=np.log(NEWPREDS2["Precio"])
 		NEWPREDS2["Precio"] = (NEWPREDS2["Precio"]-1767641)/1109204
