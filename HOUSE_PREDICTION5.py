@@ -21,14 +21,14 @@ import os
 import pandas as pd
 import io
 
-loaded_model_inter = pickle.load(open("/Users/dsgiraldo/Desktop/Modelo_Ventas.sav","rb"))
-bagging_model_arriendo = pickle.load(open("/Users/dsgiraldo/Desktop/Modelo_Arriendo.sav","rb"))
+loaded_model_inter = pickle.load(open("Modelo_Ventas.sav","rb"))
+bagging_model_arriendo = pickle.load(open("Modelo_Arriendo.sav","rb"))
 ST=[0,0,0]
 VTIPO=[0,0]
 LOC=[0,0,0,0,0,0,0,0,0]
 TIPO2=0
 ADMIN2=0
-descarga="/Users/dsgiraldo/Desktop/Modelo_Ventas.sav"
+
 
 page_bg_img = """
 <style>
