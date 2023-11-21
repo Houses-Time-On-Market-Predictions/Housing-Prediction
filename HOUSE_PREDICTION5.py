@@ -7,7 +7,6 @@ Created on Wed Nov 15 16:46:31 2023
 """
 
 #IMPORTAR LIBRERIAS
-pip install scipy
 import streamlit as st
 import numpy as np
 import pickle 
