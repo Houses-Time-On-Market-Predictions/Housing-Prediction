@@ -94,7 +94,25 @@ def intervals_loaded_fordataset(newdata3):
   upper_bound = np.mean(predictions) + margin_of_error
 
   return(sample_mean,lower_bound,upper_bound)
+	
+def intervals_loaded_fordata_arriendo(newdata4):
+  i=0
+  predictions=[]
+  newdataarray=np.asarray(newdata4)
+  newdatarepshape=newdataarray.reshape(1,-1)
+  while i<=9:
+    pred=bagging_model_arriendo.estimators_[i].predict(newdatarepshape)
+    outarray=pred[0]
+    predictions.append(outarray)
+    i=i+1
+  margin_of_error = stats.t.ppf((1 + 0.99) / 2, df=len(predictions)-1) * (np.std(predictions, ddof=1) / np.sqrt(len(predictions)))
+  sample_mean = np.mean(predictions)
+  sample_std = np.std(predictions, ddof=1)
+  lower_bound = np.mean(predictions) - margin_of_error
+  upper_bound = np.mean(predictions) + margin_of_error
 
+  return(sample_mean,lower_bound,upper_bound)
+	
 def img_to_bytes(img_path):
     img_bytes = Path(img_path).read_bytes()
     encoded = base64.b64encode(img_bytes).decode()
@@ -375,8 +393,6 @@ def main():
             uploaded_file = st.file_uploader("Upload Files",type=["xlsx"])
             
             if uploaded_file is not None:
-             file_details = {"FileName":uploaded_file.name,"FileType":uploaded_file.type,"FileSize":uploaded_file.size}
-             st.write(file_details)
              NEWPREDS = pd.read_excel(uploaded_file)
              NEWPREDS['Admin'] = (NEWPREDS['Valor_administración'] == 0).astype(int)
              NEWPREDS["Parquederos"]=NEWPREDS["Parqueaderos"]
@@ -449,8 +465,58 @@ def main():
             #if st.button("Descargar"):
                  # descargar_csv()
     elif choice == "Subir Archivo De Arriendos":   
-	       st.title("Sube Tu Archivo Para Arriendos")
-	    
+	       st.title("Subir Archivo De Arriendos")
+	       uploaded_file = st.file_uploader("Upload Files",type=["xlsx"])
+	       if uploaded_file is not None:
+		       NEWPREDS2 = pd.read_excel()
+		       NEWPREDS2["Precio"] = NEWPREDS2["Precio"]+NEWPREDS2["Valor_administracion"]
+		       NEWPREDS2["Precio"]=np.log(NEWPREDS2["Precio"])
+		       NEWPREDS2["Precio"] = (NEWPREDS2["Precio"]-1767641)/1109204
+		       NEWPREDS2["area"]=(NEWPREDS2["area"]-78.85)/46.8
+		       NEWPREDS2["antiguedad"]=(NEWPREDS2["antiguedad"]-21)/12.66
+		       NEWPREDS2=NEWPREDS2.drop("Valor_administracion",axis=1)
+		       NEWORDER2=['habitaciones', 'baños', 'Parqueaderos', 'Precio', 'area', 'antiguedad','Estrato','Tipo_de_inmueble','Localidad']
+		       NEWPREDS2=NEWPREDS2[new_order]
+		       NEWPREDS2=pd.get_dummies(NEWPREDS2,columns=["Estrato","Tipo_de_inmueble","Localidad"],drop_first=True)
+
+
+	    	       arraylow2 = np.array([])
+                       arraymean2 = np.array([])
+                       arrayupper2 = np.array([])
+		       
+	    	       for index, row in NEWPREDS.iterrows():
+               		   mean2,low2,upper2=intervals_loaded_fordataset(row)
+                	   arraymean2 = np.append(arraymean2, mean2)
+                	   arraylow2 = np.append(arraylow2, low2)
+                	   arrayupper2 = np.append(arrayupper2, upper2)
+			       
+		        NEWPREDS["low"]=arraylow2
+             		NEWPREDS["mean"]=arraymean2
+             		NEWPREDS["upper"]=arrayupper2
+            		#excel_file="excelfile.xlsx"
+             		#NEWPREDS.to_excel(excel_file,index=False)
+
+			def convert_df(NEWPREDS2):
+    # IMPORTANT: Cache the conversion to prevent computation on every rerun
+                 	    return NEWPREDS2.to_csv().encode('utf-8')
+
+			csv = convert_df(NEWPREDS2)
+            		 #excel_file = 'output.xlsx'
+            		 #csv.to_excel(excel_file, index=False)
+            		csv_bytes2 = io.BytesIO(csv)
+            		df2 = pd.read_csv(csv_bytes2)
+             		excel_file2 = io.BytesIO()
+             		df2.to_excel(excel_file2, index=False)
+             		excel_file2.seek(0)
+
+			st.download_button(
+            	 	label="Descargar excel con las predicciónes",
+             		data=excel_file2,
+             		file_name='Predicciones_De_Arriendo.xlsx',
+             		mime='text/xlsx',
+                 		)
+
+	
     elif choice == "Ayuda":
 	       st.title("Documento") 
          
