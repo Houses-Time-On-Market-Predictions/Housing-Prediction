@@ -458,13 +458,13 @@ def main():
           st.markdown("<h1 style='text-align: center; color: black;'>SOBRE NOSOTROS</h1>", unsafe_allow_html=True)
           st.markdown("<h2 style='text-align: center; color: black;'>Daniel Giraldo</h2>", unsafe_allow_html=True)
           st.markdown('''<div style="display: flex; justify-content: center;">
-                            <img src='data:image/png;base64,{}' class='img-fluid' width=148 height=256>'''.format(img_to_bytes("/Users/dsgiraldo/Desktop/FOTODANIEL.png")), unsafe_allow_html=True)
+                            <img src='data:image/png;base64,{}' class='img-fluid' width=148 height=256>'''.format(img_to_bytes("FOTODANIEL.png")), unsafe_allow_html=True)
           st.markdown("")
           st.markdown("<h3 style='text-align: center; color: black;'>Ingeniero Industrial en formación, con énfasis en el campo de negocios y administración , alto dominio de Ingles, con certificaciones internacionales que lo verifican, con demostraciones de excelencia académica a lo largo de su vida bachiller y universitaria. Con habilidades en organización, gestión empresarial, liderazgo y trabajo en equipo; participación activa como líder en diversas actividades. Presenta una actitud ambiciosa y con cualidades aptas para lograr sus metas</h3>", unsafe_allow_html=True)
       
           st.markdown("<h2 style='text-align: center; color: black;'>Luigi Di Mare</h2>", unsafe_allow_html=True)
           st.markdown('''<div style="display: flex; justify-content: center;">
-                        <img src='data:image/png;base64,{}' class='img-fluid' width=148 height=256>'''.format(img_to_bytes("/Users/dsgiraldo/Desktop/LUIGI.png")), unsafe_allow_html=True)
+                        <img src='data:image/png;base64,{}' class='img-fluid' width=148 height=256>'''.format(img_to_bytes("LUIGI.png")), unsafe_allow_html=True)
           st.markdown("")
           st.markdown("<h3 style='text-align: center; color: black;'>Me considero una persona responsable, creativa, empática y detallista. Tengo buenas habilidades para trabajar en equipo y estoy dispuesto a aprender cosas nuevas todos los días. Me gustan buscar soluciones, los nuevos retos y dar lo mejor de mí en todo momento.</h3>", unsafe_allow_html=True)
         
