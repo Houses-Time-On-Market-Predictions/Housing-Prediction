@@ -464,9 +464,63 @@ def main():
              #  )
             #if st.button("Descargar"):
                  # descargar_csv()
-    elif choice == "Subir Archivo De Arriendos":  
-	    st.title("Subir")
+    elif choice == "Subir Archivo De Arriendos":   
+           st.title("Subir Archivo De Arriendos")
+           uploaded_file2 = st.file_uploader("Upload Files",type=["xlsx"])
+           
+           if uploaded_file2 is not None:
+               
+               NEWPREDS2=pd.read_excel(uploaded_file2)
+               NEWPREDS2["PrecioTotal"] = NEWPREDS2["Precio"]+NEWPREDS2["Valor_administracion"]
+               NEWPREDS2["PrecioTotal"]=np.log(NEWPREDS2["PrecioTotal"])
+               NEWPREDS2["PrecioTotal"] = (NEWPREDS2["PrecioTotal"]-14.54)/0.44
+               NEWPREDS2["area"]=(NEWPREDS2["area"]-78.85)/46.8
+               NEWPREDS2["antiguedad"]=(NEWPREDS2["antiguedad"]-21)/12.66
+               NEWPREDS2=NEWPREDS2.drop("Valor_administracion",axis=1)
+               new_order2=['habitaciones', 'baños', 'Parqueaderos', 'PrecioTotal', 'area', 'antiguedad','Estrato','Tipo_de_inmueble','Localidad']
+               NEWPREDS2=NEWPREDS2[new_order2]
+               NEWPREDS2=pd.get_dummies(NEWPREDS2,columns=["Estrato","Tipo_de_inmueble","Localidad"],drop_first=True)
+            
+             
+           
+           
+           
+           
+               arraymean2 = np.array([])
+               arraylow2 = np.array([])
+               arrayupper2 = np.array([])
 
+               for index, row in NEWPREDS2.iterrows():
+                   mean2,low2,upper2=intervals_loaded_fordata_arriendo(row)
+                   arraymean2 = np.append(arraymean2, mean2)
+                   arraylow2 = np.append(arraylow2, low2)
+                   arrayupper2 = np.append(arrayupper2, upper2)
+
+               NEWPREDS2["mean"]=arraymean2
+               NEWPREDS2["low"]=arraylow2
+               NEWPREDS2["upper"]=arrayupper2
+           
+               def convert_df(NEWPREDS2):
+  # IMPORTANT: Cache the conversion to prevent computation on every rerun
+                   return NEWPREDS2.to_csv().encode('utf-8')
+           
+            
+               csv = convert_df(NEWPREDS2)
+           #excel_file = 'output.xlsx'
+           #csv.to_excel(excel_file, index=False)
+               csv_bytes2 = io.BytesIO(csv)
+               df2 = pd.read_csv(csv_bytes2)
+               excel_file2 = io.BytesIO()
+               df2.to_excel(excel_file2, index=False)
+               excel_file2.seek(0)
+
+               st.download_button(
+                   label="Descargar excel con las predicciónes",
+                   data=excel_file2,
+                   file_name='Predicciones_De_Arriendo.xlsx',
+                   mime='text/xlsx',
+                   )
+	
     elif choice == "Ayuda":
 	       st.title("Documento") 
          
