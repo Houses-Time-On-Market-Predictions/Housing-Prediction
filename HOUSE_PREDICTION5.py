@@ -10,7 +10,6 @@ Created on Wed Nov 15 16:46:31 2023
 import streamlit as st
 import numpy as np
 import pickle 
-import scipy
 import scipy.stats as stats
 from sklearn.ensemble import BaggingRegressor
 from sklearn.ensemble import GradientBoostingRegressor
