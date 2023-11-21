@@ -464,7 +464,8 @@ def main():
              #  )
             #if st.button("Descargar"):
                  # descargar_csv()
-    elif choice == "Subir Archivo De Arriendos":   
+    elif choice == "Subir Archivo De Arriendos":  
+	    st.title("Subir")
 
     elif choice == "Ayuda":
 	       st.title("Documento") 
