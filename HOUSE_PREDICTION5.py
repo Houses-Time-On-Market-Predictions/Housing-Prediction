@@ -117,7 +117,7 @@ def main():
     P11=["BARRIOS UNIDOS","CANDELARIA","CHAPINERO","ENGATIVA","FONTIBON","KENNEDY","MARTIRES","SUBA","TEUSAQUILLO","USAQUEN"]
     
     
-    menu = ["Home","Subir Archivo De Ventas","Ayuda","About"]
+    menu = ["Home","Subir Archivo De Ventas","Subir Archivo De Arriendos","Ayuda","About"]
     choice = st.sidebar.selectbox("Menu",menu)
     st.sidebar.markdown("<h1 style='text-align: center; color: black;'>INMUEBLES DESTACADOS</h1>", unsafe_allow_html=True)
     st.sidebar.markdown('''<div style="display: flex; justify-content: center;">
@@ -448,7 +448,9 @@ def main():
              #  )
             #if st.button("Descargar"):
                  # descargar_csv()
-                
+    elif choice == "Subir Archivo De Arriendos":   
+	       st.title("Sube Tu Archivo Para Arriendos")
+	    
     elif choice == "Ayuda":
 	       st.title("Documento") 
          
