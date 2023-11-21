@@ -121,7 +121,7 @@ def main():
     choice = st.sidebar.selectbox("Menu",menu)
     st.sidebar.markdown("<h1 style='text-align: center; color: black;'>INMUEBLES DESTACADOS</h1>", unsafe_allow_html=True)
     st.sidebar.markdown('''<div style="display: flex; justify-content: center;">
-                        <img src='data:image/png;base64,{}' class='img-fluid' width=290 height=256>'''.format(img_to_bytes("/Users/dsgiraldo/Desktop/APT1.jpeg")), unsafe_allow_html=True)
+                        <img src='data:image/png;base64,{}' class='img-fluid' width=290 height=256>'''.format(img_to_bytes("APT1.jpeg")), unsafe_allow_html=True)
     
     if st.sidebar.button("INFORMACIÓN DEL APARTAMENTO"):
         st.sidebar.markdown("Precio de Arriendo: 0")
@@ -137,7 +137,7 @@ def main():
         st.sidebar.markdown("Localidad en la que se Encuentra: CHAPINEROS")
     
     st.sidebar.markdown('''<div style="display: flex; justify-content: center;">
-                        <img src='data:image/png;base64,{}' class='img-fluid' width=290 height=256>'''.format(img_to_bytes("/Users/dsgiraldo/Desktop/APT2.jpeg")), unsafe_allow_html=True)
+                        <img src='data:image/png;base64,{}' class='img-fluid' width=290 height=256>'''.format(img_to_bytes("APT2.jpeg")), unsafe_allow_html=True)
    
     if st.sidebar.button(" INFORMACIÓN DEL APARTAMENTO"):
         st.sidebar.markdown("Precio de Arriendo: 1.800.000")
@@ -153,7 +153,7 @@ def main():
         st.sidebar.markdown("Localidad en la que se Encuentra: USAQUEN")
     
     st.sidebar.markdown('''<div style="display: flex; justify-content: center;">
-                        <img src='data:image/png;base64,{}' class='img-fluid' width=290 height=256>'''.format(img_to_bytes("/Users/dsgiraldo/Desktop/APT3.jpeg")), unsafe_allow_html=True)
+                        <img src='data:image/png;base64,{}' class='img-fluid' width=290 height=256>'''.format(img_to_bytes("APT3.jpeg")), unsafe_allow_html=True)
                         
     if st.sidebar.button("  INFORMACIÓN DEL APARTAMENTO"):
          st.sidebar.markdown("Precio de Arriendo: 0")
