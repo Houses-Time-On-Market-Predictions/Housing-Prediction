@@ -21,8 +21,8 @@ import os
 import pandas as pd
 import io
 
-loaded_model_inter = pickle.load(open("/Users/dsgiraldo/Desktop/Modelo_Ventas.sav","rb"))
-bagging_model_arriendo = pickle.load(open("/Users/dsgiraldo/Desktop/Modelo_Arriendo.sav","rb"))
+loaded_model_inter = pickle.load(open("Modelo_Ventas.sav","rb"))
+bagging_model_arriendo = pickle.load(open("Modelo_Arriendo.sav","rb"))
 ST=[0,0,0]
 VTIPO=[0,0]
 LOC=[0,0,0,0,0,0,0,0,0]
@@ -120,7 +120,7 @@ def img_to_bytes(img_path):
 
 def main():
     
-    st.sidebar.markdown('''[<img src='data:image/png;base64,{}' class='img-fluid' width=256 height=86>](https://www.uninorte.edu.co)'''.format(img_to_bytes("/Users/dsgiraldo/Desktop/UNINORTE.png")), unsafe_allow_html=True)
+    st.sidebar.markdown('''[<img src='data:image/png;base64,{}' class='img-fluid' width=256 height=86>](https://www.uninorte.edu.co)'''.format(img_to_bytes("UNINORTE.png")), unsafe_allow_html=True)
     
     P1=0
     P2=0
@@ -139,7 +139,7 @@ def main():
     choice = st.sidebar.selectbox("Menu",menu)
     st.sidebar.markdown("<h1 style='text-align: center; color: black;'>INMUEBLES DESTACADOS</h1>", unsafe_allow_html=True)
     st.sidebar.markdown('''<div style="display: flex; justify-content: center;">
-                        <img src='data:image/png;base64,{}' class='img-fluid' width=290 height=256>'''.format(img_to_bytes("/Users/dsgiraldo/Desktop/APT1.jpeg")), unsafe_allow_html=True)
+                        <img src='data:image/png;base64,{}' class='img-fluid' width=290 height=256>'''.format(img_to_bytes("APT1.jpeg")), unsafe_allow_html=True)
     
     if st.sidebar.button("INFORMACIÓN DEL APARTAMENTO"):
         st.sidebar.markdown("Precio de Arriendo: 0")
@@ -155,7 +155,7 @@ def main():
         st.sidebar.markdown("Localidad en la que se Encuentra: CHAPINEROS")
     
     st.sidebar.markdown('''<div style="display: flex; justify-content: center;">
-                        <img src='data:image/png;base64,{}' class='img-fluid' width=290 height=256>'''.format(img_to_bytes("/Users/dsgiraldo/Desktop/APT2.jpeg")), unsafe_allow_html=True)
+                        <img src='data:image/png;base64,{}' class='img-fluid' width=290 height=256>'''.format(img_to_bytes("APT2.jpeg")), unsafe_allow_html=True)
    
     if st.sidebar.button(" INFORMACIÓN DEL APARTAMENTO"):
         st.sidebar.markdown("Precio de Arriendo: 1.800.000 COP")
@@ -171,7 +171,7 @@ def main():
         st.sidebar.markdown("Localidad en la que se Encuentra: USAQUEN")
     
     st.sidebar.markdown('''<div style="display: flex; justify-content: center;">
-                        <img src='data:image/png;base64,{}' class='img-fluid' width=290 height=256>'''.format(img_to_bytes("/Users/dsgiraldo/Desktop/APT3.jpeg")), unsafe_allow_html=True)
+                        <img src='data:image/png;base64,{}' class='img-fluid' width=290 height=256>'''.format(img_to_bytes("APT3.jpeg")), unsafe_allow_html=True)
                         
     if st.sidebar.button("  INFORMACIÓN DEL APARTAMENTO"):
          st.sidebar.markdown("Precio de Arriendo: 0")
@@ -187,7 +187,7 @@ def main():
          st.sidebar.markdown("Localidad en la que se Encuentra: USAQUEN")
          
     st.sidebar.markdown('''<div style="display: flex; justify-content: center;">
-                        <img src='data:image/png;base64,{}' class='img-fluid' width=290 height=256>'''.format(img_to_bytes("/Users/dsgiraldo/Desktop/APT4.jpeg")), unsafe_allow_html=True)
+                        <img src='data:image/png;base64,{}' class='img-fluid' width=290 height=256>'''.format(img_to_bytes("APT4.jpeg")), unsafe_allow_html=True)
                         
     if st.sidebar.button("   INFORMACIÓN DEL APARTAMENTO"):
          st.sidebar.markdown("Precio de Arriendo: 0")
@@ -203,7 +203,7 @@ def main():
          st.sidebar.markdown("Localidad en la que se Encuentra: ENGATIVA")
          
     st.sidebar.markdown('''<div style="display: flex; justify-content: center;">
-                        <img src='data:image/png;base64,{}' class='img-fluid' width=290 height=256>'''.format(img_to_bytes("/Users/dsgiraldo/Desktop/APT5.jpeg")), unsafe_allow_html=True)
+                        <img src='data:image/png;base64,{}' class='img-fluid' width=290 height=256>'''.format(img_to_bytes("APT5.jpeg")), unsafe_allow_html=True)
                         
     if st.sidebar.button("   INFORMACIÓN DEL APARTAMENTO "):
          st.sidebar.markdown("Precio de Arriendo: 3.500.000 COP")
@@ -219,7 +219,7 @@ def main():
          st.sidebar.markdown("Localidad en la que se Encuentra: BARRIOS UNIDOS")
          
     st.sidebar.markdown('''<div style="display: flex; justify-content: center;">
-                        <img src='data:image/png;base64,{}' class='img-fluid' width=290 height=256>'''.format(img_to_bytes("/Users/dsgiraldo/Desktop/APT6.jpeg")), unsafe_allow_html=True)
+                        <img src='data:image/png;base64,{}' class='img-fluid' width=290 height=256>'''.format(img_to_bytes("APT6.jpeg")), unsafe_allow_html=True)
                         
     if st.sidebar.button("   INFORMACIÓN DEL APARTAMENTO  "):
          st.sidebar.markdown("Precio de Arriendo: 0")
@@ -578,19 +578,19 @@ def main():
           st.markdown("<h1 style='text-align: center; color: black;'>SOBRE NOSOTROS</h1>", unsafe_allow_html=True)
           st.markdown("<h2 style='text-align: center; color: black;'>Daniel Giraldo</h2>", unsafe_allow_html=True)
           st.markdown('''<div style="display: flex; justify-content: center;">
-                            <img src='data:image/png;base64,{}' class='img-fluid' width=148 height=256>'''.format(img_to_bytes("/Users/dsgiraldo/Desktop/FOTODANIEL.png")), unsafe_allow_html=True)
+                            <img src='data:image/png;base64,{}' class='img-fluid' width=148 height=256>'''.format(img_to_bytes("FOTODANIEL.png")), unsafe_allow_html=True)
           st.markdown("")
           st.markdown("<h3 style='text-align: center; color: black;'>Ingeniero Industrial en formación</h3>", unsafe_allow_html=True)
           st.markdown("<h6 style='text-align: center;'>Con énfasis en el campo de negocios y administración , alto dominio de Ingles, con certificaciones internacionales que lo verifican, con demostraciones de excelencia académica a lo largo de su vida bachiller y universitaria. Con habilidades en organización, gestión empresarial, liderazgo y trabajo en equipo; participación activa como líder en diversas actividades. Presenta una actitud ambiciosa y con cualidades aptas para lograr sus metas</h6>", unsafe_allow_html=True)
           st.markdown("<h2 style='text-align: center; color: black;'>Luigi Di Mare</h2>", unsafe_allow_html=True)
           st.markdown('''<div style="display: flex; justify-content: center;">
-                        <img src='data:image/png;base64,{}' class='img-fluid' width=148 height=256>'''.format(img_to_bytes("/Users/dsgiraldo/Desktop/LUIGI.png")), unsafe_allow_html=True)
+                        <img src='data:image/png;base64,{}' class='img-fluid' width=148 height=256>'''.format(img_to_bytes("LUIGI.png")), unsafe_allow_html=True)
           st.markdown("")
           st.markdown("<h3 style='text-align: center; color: black;'>Ingeniero Industrial en formacion</h3>", unsafe_allow_html=True)
           st.markdown("<h6 style='text-align: center; color: black;'>Me considero una persona responsable, creativa, empática y detallista. Tengo buenas habilidades para trabajar en equipo y estoy dispuesto a aprender cosas nuevas todos los días. Me gustan buscar soluciones, los nuevos retos y dar lo mejor de mí en todo momento.</h6>", unsafe_allow_html=True)
           st.markdown("<h2 style='text-align: center; color: black;'>Luis Ovalle</h2>", unsafe_allow_html=True)
           st.markdown('''<div style="display: flex; justify-content: center;">
-                        <img src='data:image/png;base64,{}' class='img-fluid' width=148 height=256>'''.format(img_to_bytes("/Users/dsgiraldo/Desktop/LUCHO.png")), unsafe_allow_html=True)
+                        <img src='data:image/png;base64,{}' class='img-fluid' width=148 height=256>'''.format(img_to_bytes("LUCHO.png")), unsafe_allow_html=True)
           st.markdown("<h3 style='text-align: center; color: black;'>Ingeniero Industrial en formacion</h3>", unsafe_allow_html=True)              
           st.markdown("<h6 style='text-align: center; color: black;'>Soy estudiante de noveno semestre de Ingeniería Industrial de la Universidad del Norte de Barranquilla, con interés en el análisis de la información como herramienta para crear, desarrollar y ejecutar estrategias que permiten el desarrollo empresarial y la toma de decisiones. He formado parte de grupos estudiantiles, de semilleros y del equipo de monitores académicos. Estas actividades me han aportado a mi crecimiento personal y al desarrollo de habilidades blandas tales como el trabajo en equipo, la administración del tiempo, la capacidad para comprender y adaptarme con facilidad a los cambios y el fortalecimiento de la comunicación asertiva y las buenas relaciones interpersonales.</h6>", unsafe_allow_html=True)
 
