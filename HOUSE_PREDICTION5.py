@@ -264,7 +264,7 @@ def main():
               EST=[0,0,1]
           else:
               EST=[0,0,0]
-          TIPO = st.selectbox("**Que tipo de vivienda se trata**",P9)
+          TIPO = st.selectbox("**¿Que tipo de vivienda se trata?**",P9)
 
           if TIPO == "CASA":
            TIPO2 =1
