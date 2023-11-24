@@ -136,7 +136,7 @@ def main():
     
     
     menu = ["Home","Subir Archivo De Ventas","Subir Archivo De Arriendos","Ayuda","About"]
-    choice = st.sidebar.selectbox("Menu",menu)
+    choice = st.sidebar.selectbox("Menú",menu)
     st.sidebar.markdown("<h1 style='text-align: center; color: black;'>INMUEBLES DESTACADOS</h1>", unsafe_allow_html=True)
     st.sidebar.markdown('''<div style="display: flex; justify-content: center;">
                         <img src='data:image/png;base64,{}' class='img-fluid' width=290 height=256>'''.format(img_to_bytes("APT1.jpeg")), unsafe_allow_html=True)
@@ -144,14 +144,14 @@ def main():
     if st.sidebar.button("INFORMACIÓN DEL APARTAMENTO"):
         st.sidebar.markdown("Precio de Arriendo: 0")
         st.sidebar.markdown("Precio de Venta: 465.000.000 COP")
-        st.sidebar.markdown("Area del Inmueble en Metros Cuadrados: 109")
-        st.sidebar.markdown("Numero de Habitaciones: 3")
-        st.sidebar.markdown("Numero de Baños: 4")
-        st.sidebar.markdown("Numero de Parqueaderos: 2")
-        st.sidebar.markdown("Antiguedad en Años: 10")
+        st.sidebar.markdown("Área del Inmueble en Metros Cuadrados: 109")
+        st.sidebar.markdown("Número de Habitaciones: 3")
+        st.sidebar.markdown("Número de Baños: 4")
+        st.sidebar.markdown("Número de Parqueaderos: 2")
+        st.sidebar.markdown("Antigüedad en Años: 10")
         st.sidebar.markdown("Estrato de la Vivienda: 5")
         st.sidebar.markdown("Tipo de Inmueble: APARTAMENTO")
-        st.sidebar.markdown("Valor de la Administacion: 377.800 COP")
+        st.sidebar.markdown("Valor de la Administación: 377.800 COP")
         st.sidebar.markdown("Localidad en la que se Encuentra: CHAPINEROS")
     
     st.sidebar.markdown('''<div style="display: flex; justify-content: center;">
@@ -160,14 +160,14 @@ def main():
     if st.sidebar.button(" INFORMACIÓN DEL APARTAMENTO"):
         st.sidebar.markdown("Precio de Arriendo: 1.800.000 COP")
         st.sidebar.markdown("Precio de Venta: 0")
-        st.sidebar.markdown("Area del Inmueble en Metros Cuadrados: 82")
-        st.sidebar.markdown("Numero de Habitaciones: 3")
-        st.sidebar.markdown("Numero de Baños: 3")
-        st.sidebar.markdown("Numero de Parqueaderos: 1")
-        st.sidebar.markdown("Antiguedad en Años: 38")
+        st.sidebar.markdown("Área del Inmueble en Metros Cuadrados: 82")
+        st.sidebar.markdown("Número de Habitaciones: 3")
+        st.sidebar.markdown("Número de Baños: 3")
+        st.sidebar.markdown("Número de Parqueaderos: 1")
+        st.sidebar.markdown("Antigüedad en Años: 38")
         st.sidebar.markdown("Estrato de la Vivienda: 5")
         st.sidebar.markdown("Tipo de Inmueble: APARTAMENTO")
-        st.sidebar.markdown("Valor de la Administracion: 498.000 COP")
+        st.sidebar.markdown("Valor de la Administración: 498.000 COP")
         st.sidebar.markdown("Localidad en la que se Encuentra: USAQUEN")
     
     st.sidebar.markdown('''<div style="display: flex; justify-content: center;">
@@ -176,14 +176,14 @@ def main():
     if st.sidebar.button("  INFORMACIÓN DEL APARTAMENTO"):
          st.sidebar.markdown("Precio de Arriendo: 0")
          st.sidebar.markdown("Precio de Venta: 500.000.000 COP")
-         st.sidebar.markdown("Area del Inmueble en Metros Cuadrados: 119")
-         st.sidebar.markdown("Numero de Habitaciones: 3")
-         st.sidebar.markdown("Numero de Baños: 3")
-         st.sidebar.markdown("Numero de Parqueaderos: 2")
-         st.sidebar.markdown("Antiguedad en Años: 44")
+         st.sidebar.markdown("Área del Inmueble en Metros Cuadrados: 119")
+         st.sidebar.markdown("Número de Habitaciones: 3")
+         st.sidebar.markdown("Número de Baños: 3")
+         st.sidebar.markdown("Número de Parqueaderos: 2")
+         st.sidebar.markdown("Antigüedad en Años: 44")
          st.sidebar.markdown("Estrato de la Vivienda: 4")
          st.sidebar.markdown("Tipo de Inmueble: CASA")
-         st.sidebar.markdown("Valor de la Administracion: 0")
+         st.sidebar.markdown("Valor de la Administración: 0")
          st.sidebar.markdown("Localidad en la que se Encuentra: USAQUEN")
          
     st.sidebar.markdown('''<div style="display: flex; justify-content: center;">
@@ -192,14 +192,14 @@ def main():
     if st.sidebar.button("   INFORMACIÓN DEL APARTAMENTO"):
          st.sidebar.markdown("Precio de Arriendo: 0")
          st.sidebar.markdown("Precio de Venta: 390.000.000 COP")
-         st.sidebar.markdown("Area del Inmueble en Metros Cuadrados: 83")
-         st.sidebar.markdown("Numero de Habitaciones: 3")
-         st.sidebar.markdown("Numero de Baños: 2")
-         st.sidebar.markdown("Numero de Parqueaderos: 2")
-         st.sidebar.markdown("Antiguedad en Años: 13")
+         st.sidebar.markdown("Área del Inmueble en Metros Cuadrados: 83")
+         st.sidebar.markdown("Número de Habitaciones: 3")
+         st.sidebar.markdown("Número de Baños: 2")
+         st.sidebar.markdown("Número de Parqueaderos: 2")
+         st.sidebar.markdown("Antigüedad en Años: 13")
          st.sidebar.markdown("Estrato de la Vivienda: 5")
          st.sidebar.markdown("Tipo de Inmueble: APARTAMENTO")
-         st.sidebar.markdown("Valor de la Administracion: 235.000 COP")
+         st.sidebar.markdown("Valor de la Administración: 235.000 COP")
          st.sidebar.markdown("Localidad en la que se Encuentra: ENGATIVA")
          
     st.sidebar.markdown('''<div style="display: flex; justify-content: center;">
@@ -208,14 +208,14 @@ def main():
     if st.sidebar.button("   INFORMACIÓN DEL APARTAMENTO "):
          st.sidebar.markdown("Precio de Arriendo: 3.500.000 COP")
          st.sidebar.markdown("Precio de Venta: 0")
-         st.sidebar.markdown("Area del Inmueble en Metros Cuadrados: 290")
-         st.sidebar.markdown("Numero de Habitaciones: 4")
-         st.sidebar.markdown("Numero de Baños: 3")
-         st.sidebar.markdown("Numero de Parqueaderos: 4")
-         st.sidebar.markdown("Antiguedad en Años: 30")
+         st.sidebar.markdown("Área del Inmueble en Metros Cuadrados: 290")
+         st.sidebar.markdown("Número de Habitaciones: 4")
+         st.sidebar.markdown("Número de Baños: 3")
+         st.sidebar.markdown("Número de Parqueaderos: 4")
+         st.sidebar.markdown("Antigüedad en Años: 30")
          st.sidebar.markdown("Estrato de la Vivienda: 5")
          st.sidebar.markdown("Tipo de Inmueble: CASA")
-         st.sidebar.markdown("Valor de la Administracion: 0")
+         st.sidebar.markdown("Valor de la Administración: 0")
          st.sidebar.markdown("Localidad en la que se Encuentra: BARRIOS UNIDOS")
          
     st.sidebar.markdown('''<div style="display: flex; justify-content: center;">
@@ -224,20 +224,20 @@ def main():
     if st.sidebar.button("   INFORMACIÓN DEL APARTAMENTO  "):
          st.sidebar.markdown("Precio de Arriendo: 0")
          st.sidebar.markdown("Precio de Venta: 1.010.000 COP")
-         st.sidebar.markdown("Area del Inmueble en Metros Cuadrados: 60")
-         st.sidebar.markdown("Numero de Habitaciones: 3")
-         st.sidebar.markdown("Numero de Baños: 2")
-         st.sidebar.markdown("Numero de Parqueaderos: 1")
-         st.sidebar.markdown("Antiguedad en Años: 22")
+         st.sidebar.markdown("Área del Inmueble en Metros Cuadrados: 60")
+         st.sidebar.markdown("Número de Habitaciones: 3")
+         st.sidebar.markdown("Número de Baños: 2")
+         st.sidebar.markdown("Número de Parqueaderos: 1")
+         st.sidebar.markdown("Antigüedad en Años: 22")
          st.sidebar.markdown("Estrato de la Vivienda: 3")
          st.sidebar.markdown("Tipo de Inmueble: CASA")
-         st.sidebar.markdown("Valor de la Administracion: 153.000 COP")
+         st.sidebar.markdown("Valor de la Administración: 153.000 COP")
          st.sidebar.markdown("Localidad en la que se Encuentra: FONTIBON")
     
     
     if choice == "Home":
         
-          st.markdown("<h6 style='text-align: center; color: black;'>¡IMPORTANTE!: Recomendamos ver los videos en la sección del menu ayuda antes de comenzar a usar la interfaz.</h6>", unsafe_allow_html=True)
+          st.markdown("<h6 style='text-align: center; color: black;'>¡IMPORTANTE!: Recomendamos ver los videos en la sección ayuda del menú antes de comenzar a usar la interfaz.</h6>", unsafe_allow_html=True)
         
           st.title("PREDICCIONES DE TIEMPO PARA VENTAS Y ARRIENDOS")
 
@@ -247,12 +247,12 @@ def main():
           PRECIOA = st.number_input("**Precio De Arriendo**", step=1000000, min_value=0, value=P1)
           #PRECION=(PRECIOA-1767641)/1109204
           PRECIO = st.number_input("**Precio De Venta**", step=100000, min_value=0,value=P2)
-          AREA = st.number_input("**Area Del Inmueble En Metros Cuadrados**", step=1, min_value=0,value=P3)
+          AREA = st.number_input("**Área Del Inmueble En Metros Cuadrados**", step=1, min_value=0,value=P3)
           PA=PRECIO/max(AREA,1)
           AREAN=(AREA-78.85)/46.81
-          HABITACIONES = st.number_input("**Numero de Habitaciones**",step=1,min_value=0,value=P4)
-          BAÑOS = st.number_input("**Numero de Baños**",step=1,min_value=0,value=P5)
-          PARQUEADEROS = st.number_input("**Numero de Parqueaderos**",step=1,min_value=0,value=P6)
+          HABITACIONES = st.number_input("**Número de Habitaciones**",step=1,min_value=0,value=P4)
+          BAÑOS = st.number_input("**Número de Baños**",step=1,min_value=0,value=P5)
+          PARQUEADEROS = st.number_input("**Número de Parqueaderos**",step=1,min_value=0,value=P6)
           ANTIGUEDAD = st.number_input("**Antiguedad en años**",step=1,min_value=0,value=P7)
           ANTIGUEDADN=(ANTIGUEDAD-20.99)/12.66
           ESTRATO = st.selectbox("**Estrato de la vivienda**",P8)
@@ -271,10 +271,10 @@ def main():
           else:
               TIPO2 =0
                      
-          ADMIN = st.selectbox("**¿Se debe pagar administracion?**",P10)
+          ADMIN = st.selectbox("**¿Se debe pagar administración?**",P10)
           if ADMIN == "SI":
             ADMIN2=0
-            PrecioAdmin=st.number_input("**¿Cual es el precio de la administracion?**",step=100000, min_value=0, value=0)
+            PrecioAdmin=st.number_input("**¿Cual es el precio de la administración?**",step=100000, min_value=0, value=0)
           else:
               ADMIN2=1
               PrecioAdmin=0
